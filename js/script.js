@@ -1,12 +1,14 @@
 drawTree(11);
 
 function drawTree(treeHeight) {
+    var star = '';
+    var space = '';
     for (var i = 0; i <= treeHeight; i++) {
-        var star = '';
-        for (var j = 0; j <= i; j++) {
-            star += '*';
+        space = '';
+        for (var j = treeHeight; j > i; j--) {
+            space += " ";
         }
-        console.log(star);
-        
+        star += '* ';
+        console.log(space + star);
     }
 }
